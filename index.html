@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images\icon-dollar.svg" type="image/x-icon">
+    <script src="main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="logo-image">
+            <img id="logo" src="images\logo.svg" alt="logo">
+        </div>
+
+        <div class="calculator">
+            <div class="info">
+                <div class="bill">
+                    <div class="para">
+                    <p>Bill</p>
+                    <p id="bill-error">Can't be zero</p>
+                    </div>
+                    <input id="bill-input" type="number" placeholder="0" onkeyup="if(this.value<0){this.value= 0}">
+                </div>
+
+                <div class="select-tip">
+                    <p>Select Tip %</p>
+                    <div class="tip-options">
+                        <button class="tip" id="five">5%</button>
+                        <button class="tip" id="ten">10%</button>
+                        <button class="tip" id="fifteen">15%</button>
+                        <button class="tip" id="twentyfive">25%</button>
+                        <button class="tip" id="fifty">50%</button>
+                        <input class="tip" id="custom-input" type="text" placeholder="Custom">
+                    </div>
+                </div>
+                <div class="people">
+                    <div class="para">
+                    <p>Number of People</p>
+                    <p id="people-error">Can't be zero</p>
+                    </div>
+                    <input id="people-input" type="number" placeholder="0" onkeyup="if(this.value<0){this.value= 0}">
+                </div>
+            </div>
+
+            <div class="tips">
+                <div class="tip-amounts">
+                    <div class="tip-amount">
+                        <div class="text">
+                            <p>Tip Amount</p>
+                            <p class="person">/ person</p>
+                        </div>
+                        <div class="tip-number" id="amount-person">$0.00</div>
+                    </div>
+                    <div class="tip-amount">
+                        <div class="text">
+                            <p>Total</p>
+                            <p class="person">/ person</p>
+                        </div>
+                        <div class="tip-number" id="amount-total">$0.00</div>
+                    </div>
+                </div>
+                <button type="reset" id="reset-btn" class="disabled">RESET</button>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
